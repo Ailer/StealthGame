@@ -187,7 +187,7 @@ MonoBehaviour:
   m_LightmapSize: 1024
   m_DrawTreesAndFoliage: 1
   m_CollectDetailPatches: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: aa09ea469bf79ca49905c993b86141e5, type: 2}
+  m_MaterialTemplate: {fileID: 0}
 --- !u!4 &7148195
 Transform:
   m_ObjectHideFlags: 0
@@ -9234,7 +9234,7 @@ GameObject:
   - 65: {fileID: 1999977052}
   - 23: {fileID: 1999977051}
   - 54: {fileID: 1999977055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Roof
   m_TagString: House
   m_Icon: {fileID: 0}
@@ -9248,13 +9248,13 @@ Renderer:
     type: 2}
   m_PrefabInternal: {fileID: 1776533256}
   m_GameObject: {fileID: 1999977050}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 7afc19dde8e63774c92affa3eabd5c18, type: 2}
+  - {fileID: 2100000, guid: e3ca4813a60866542911190da0a508be, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -9290,8 +9290,8 @@ Transform:
   m_PrefabInternal: {fileID: 1776533256}
   m_GameObject: {fileID: 1999977050}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: 14.2656651, y: -4.22576427, z: 28.5423679}
-  m_LocalScale: {x: 1, y: 100, z: 100}
+  m_LocalPosition: {x: 35.4000015, y: -4.78000021, z: 38.0999985}
+  m_LocalScale: {x: 1, y: 70, z: 50}
   m_Children: []
   m_Father: {fileID: 399285975}
   m_RootOrder: 0
