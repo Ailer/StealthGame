@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class Clock : MonoBehaviour {
 //-----------------------------------------------------------------------------------------------------------------------------------------
@@ -33,6 +34,8 @@ void Start()
     pointerSeconds = transform.Find("rotation_axis_pointer_seconds").gameObject;
     pointerMinutes = transform.Find("rotation_axis_pointer_minutes").gameObject;
     pointerHours   = transform.Find("rotation_axis_pointer_hour").gameObject;
+    minutes = DateTime.Now.Minute;
+    hour = DateTime.Now.Hour;
 
     msecs = 0.0f;
     seconds = 0;

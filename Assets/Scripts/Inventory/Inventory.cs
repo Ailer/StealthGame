@@ -29,12 +29,17 @@ public class Inventory : ScriptableObject
     /// <returns></returns>
     public InventoryObject GetInventoryObject(string name)
     {
-        if (!this._inventory.ContainsKey(name))
+        if (!this.InventoryContainsObject(name))
         {
             return null;
         }
 
         return this._inventory[name];
+    }
+
+    public bool InventoryContainsObject(string name)
+    {
+        return this._inventory.ContainsKey(name);
     }
 
     /// <summary>
@@ -43,7 +48,7 @@ public class Inventory : ScriptableObject
     /// <param name="inventoryObject">The inventar object.</param>
     public void AddInventoryObject(InventoryObject inventoryObject, int quantity = 1)
     {
-        if (this._inventory.ContainsKey(inventoryObject.ObjectName))
+        if (this.InventoryContainsObject(inventoryObject.ObjectName))
         {
             this._inventory[inventoryObject.ObjectName].Quantity += 1;
         }
@@ -61,7 +66,7 @@ public class Inventory : ScriptableObject
     public void RemoveInventoryObject(InventoryObject inventoryObject, bool destroyObject = false)
     {
         if (inventoryObject != null &&
-            this._inventory.ContainsKey(inventoryObject.ObjectName))
+            this.InventoryContainsObject(inventoryObject.ObjectName))
         {
             this._inventory.Remove(inventoryObject.ObjectName);
 

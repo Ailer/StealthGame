@@ -4,9 +4,6 @@ using System.Collections.Generic;
 
 public class ButtonEnemyTower : Button
 {
-    #region - Private
-    #endregion
-
     #region - Public
     #region - Vars
 
@@ -18,8 +15,12 @@ public class ButtonEnemyTower : Button
 
     public override void PushButton()
     {
-        this.renderer.material.color = Color.red;
-        this.ControlledTowers.ForEach(f => f.IsActivated = false);
+        if (!this.IsActivated)
+        {
+            this.renderer.material.color = Color.red;
+            this.ControlledTowers.ForEach(f => f.IsActivated = false);
+            this.IsActivated = true; 
+        }
     }
     #endregion
     #endregion

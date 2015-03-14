@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     #region - Vars
 
     //private IList<GameObject> _inventory = new List<GameObject>();
-    private Animator _playerController;
+    //private Animator _playerController;
     private Weapon _weapon;
     private const float openDistance = 8f;
     private const string weaponTag = "Weapon";
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        this._playerController = this.GetComponent<Animator>();
+        //this._playerController = this.GetComponent<Animator>();
         this._rightHand = GameObject.Find("RightHandObject") as GameObject;
         this.CurrentLive = this.MaxLive;
         Player.PlayerInventory = ScriptableObject.CreateInstance<Inventory>();
@@ -48,14 +48,14 @@ public class Player : MonoBehaviour
         movement += Input.GetAxis("Horizontal") * transform.right;
         movement += Input.GetAxis("Vertical") * transform.forward;
 
-        if (movement != Vector3.zero)
-        {
-            this.SetSpeed(this.WalkSpeed);
-        }
-        else
-        {
-            this.SetSpeed(0);
-        }
+        //if (movement != Vector3.zero)
+        //{
+        //    this.SetSpeed(this.WalkSpeed);
+        //}
+        //else
+        //{
+        //    this.SetSpeed(0);
+        //}
 
         rigidbody.MovePosition(rigidbody.position + (movement.normalized * this.WalkSpeed * Time.deltaTime));
     }
@@ -86,7 +86,7 @@ public class Player : MonoBehaviour
         {
             if (hit.transform.tag == "Door")
             {
-                this._playerController.SetTrigger(Player.pushButtonAnimationName);
+                //this._playerController.SetTrigger(Player.pushButtonAnimationName);
                 Door door = hit.transform.gameObject.GetComponent<Door>();
 
                 if (door.Key != null)
@@ -111,20 +111,19 @@ public class Player : MonoBehaviour
             }
             else if (hit.transform.tag == Button.ButtonTag)
             {
-                Debug.Log("Button");
                 Button button = hit.transform.GetComponent<Button>();
                 button.PushButton();
             }
         }
     }
 
-    private void SetSpeed(float speed)
-    {
-        if (speed >= 0)
-        {
-            this._playerController.SetFloat(Player.speedVariableName, speed);
-        }
-    }
+    //private void SetSpeed(float speed)
+    //{
+    //    if (speed >= 0)
+    //    {
+    //        this._playerController.SetFloat(Player.speedVariableName, speed);
+    //    }
+    //}
 
     private void OnTriggerEnter(Collider inCollider)
     {
@@ -140,7 +139,7 @@ public class Player : MonoBehaviour
             if (this.CurrentLive <= 0)
             {
                 Debug.Log("Game Over");
-                Application.LoadLevel(Application.loadedLevel);
+                GameLogic.LoadLevel(1);
             }
         }
     }

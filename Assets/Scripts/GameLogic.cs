@@ -53,7 +53,7 @@ public class GameLogic : MonoBehaviour
     {
         Application.LoadLevel(levelId);
         Time.timeScale = 1;
-        Screen.showCursor = true;
+        Screen.showCursor = false;
     }
 
     public static void DeactivateCameraControl()

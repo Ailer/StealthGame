@@ -46,7 +46,7 @@ public class MainMenu : MonoBehaviour
                 this.CloseMenu();
             }
             else if (this.levelFinished
-                && Application.loadedLevel < 4
+                && Application.loadedLevel < Application.levelCount
                 && GUILayout.Button("Nächstes Level"))
             {
                 GameLogic.LoadLevel(Application.loadedLevel + 1);

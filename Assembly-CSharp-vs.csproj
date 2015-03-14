@@ -47,35 +47,33 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ImportedAssets\Clock\Scripts\Clock.cs" />
-     <Compile Include="Assets\ImportedAssets\LINQtoGameObject\Examples\SampleSceneScript.cs" />
-     <Compile Include="Assets\ImportedAssets\LINQtoGameObject\Scripts\GameObjectBuilder.cs" />
-     <Compile Include="Assets\ImportedAssets\LINQtoGameObject\Scripts\GameObjectExtensions.Enumerable.cs" />
-     <Compile Include="Assets\ImportedAssets\LINQtoGameObject\Scripts\GameObjectExtensions.Operate.cs" />
-     <Compile Include="Assets\ImportedAssets\LINQtoGameObject\Scripts\GameObjectExtensions.Traverse.cs" />
      <Compile Include="Assets\ImportedAssets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Buttons\Button.cs" />
      <Compile Include="Assets\Scripts\Buttons\ButtonEnemyTower.cs" />
-     <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\Door\Door.cs" />
+     <Compile Include="Assets\Scripts\Door\FinalDoor.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyBase.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemySoldier.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyTower.cs" />
-     <Compile Include="Assets\Scripts\FinalDoor.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryObject.cs" />
      <Compile Include="Assets\Scripts\Menues\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Menues\StartMenu.cs" />
-     <Compile Include="Assets\Scripts\MessageSystem.cs" />
+     <Compile Include="Assets\Scripts\Messages\Message.cs" />
+     <Compile Include="Assets\Scripts\Messages\MessageInitialize.cs" />
+     <Compile Include="Assets\Scripts\Messages\MessageSystem.cs" />
      <Compile Include="Assets\Scripts\MinimapCamera.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Progressbar.cs" />
-     <Compile Include="Assets\Scripts\TutorialObject.cs" />
      <Compile Include="Assets\Scripts\Weapons\Bullet.cs" />
      <Compile Include="Assets\Scripts\Weapons\Gun.cs" />
      <Compile Include="Assets\Scripts\Weapons\Knife.cs" />
      <Compile Include="Assets\Scripts\Weapons\Weapon.cs" />
-     <None Include="Assets\ImportedAssets\LINQtoGameObject\README.txt" />
+     <None Include="Assets\ImportedAssets\plants\dd\AlphaTest-Bumped.shader" />
+     <None Include="Assets\ImportedAssets\Chairs and sofas pack\Readme.txt" />
      <None Include="Assets\ImportedAssets\Military_Rifle_01_Free_v2\Docs\Military_Rifle_Free_Unity_Info.txt" />
+     <None Include="Assets\ImportedAssets\Ornamental Flower Set\Shaders\Transparent-BumpSpecNoCull.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
  </Reference>

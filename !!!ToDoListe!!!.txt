@@ -1,0 +1,22 @@
+- Größere Türknaufe.
+- 2. Level GUI Lebensanzeige Text unter oder oberhalb der Leiste
+- Waffen Dialog verschwinden lassen nachdem Waffe aufgehoben
+
+
+1. Eine kleine Dokumentation mit mind. 12'000 Zeichen Umfang als PDF. Bestehend aus:
+
+    Game Titel, voller Name, Matrikelnr.
+    Screenshot
+    Beschreibung der Grundidee und des Endprodukts
+    Beschreibung des Entwicklungsprozess (Text und Bild/Screenshots)
+    Zusammenfassung der Codestruktur
+
+2.  Das Unity Source Projekt und falls möglich das Game als Executable für Win&Mac. Bestehend aus mindestens folgenden Scenes:
+
+    Intro-Screen
+    MainMenu mit Buttons zu allen Szenen (ist wichtig fürs Testing)
+    Howto-Screen mit Beschreibung der Spielsteuerung und der Story
+    Credits, Infos über euch und anderen Mitwirkenden
+    Mindestens 3 Levels mit steigendem Schwierigkeitsgrad
+    Outro Win
+    Outro Lose
