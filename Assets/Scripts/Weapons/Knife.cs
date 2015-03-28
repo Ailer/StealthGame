@@ -3,8 +3,6 @@ using System.Collections;
 
 public class Knife : Weapon
 {
-    Animator _knifeController;
-
     private void Start()
     {
         this.Range = 2;
@@ -24,9 +22,7 @@ public class Knife : Weapon
         {
             Vector3 tmp = hit.transform.position - transform.position;
             realRange = tmp.magnitude - 1;
-            Debug.Log(realRange);
         }
-
 
         if (realRange > 0)
         {

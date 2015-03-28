@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public abstract class EnemyBase : MonoBehaviour
 {
@@ -17,8 +19,12 @@ public abstract class EnemyBase : MonoBehaviour
     protected virtual void Start()
     {
         this._player = GameObject.Find(Player.PlayerName);
-        this.Weapon.Attack = false;
-        StartCoroutine(this.Weapon.AttackTarget());
+        this.StopAttackWithWeapons();
+
+        foreach (Weapon weapon in Weapons)
+        {
+            this.StartCoroutine(weapon.AttackTarget());
+        }
     }
 
     protected virtual bool LocateTarget()
@@ -74,12 +80,29 @@ public abstract class EnemyBase : MonoBehaviour
             yield return null;
         }
     }
+
+    public void AttackWithWeapons()
+    {
+        foreach (Weapon weapon in Weapons)
+        {
+            weapon.Attack = true;
+        }
+    }
+
+    public void StopAttackWithWeapons()
+    {
+        foreach (Weapon weapon in Weapons)
+        {
+            weapon.Attack = false;
+        }
+    }
+
     #endregion
     #endregion
 
     #region - Public
 
-    public Gun Weapon;
+    public List<Weapon> Weapons;
     public float VisualRange;
     public int VisualAngle;
     public int VisualAngleIncrement;

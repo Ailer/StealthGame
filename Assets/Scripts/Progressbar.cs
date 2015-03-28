@@ -14,9 +14,9 @@ public class Progressbar : MonoBehaviour
             GUI.DrawTexture(new Rect(this.ProgressbarRect.x,
                                      this.ProgressbarRect.y,
                                      (this.CurrentValue / this.MaxValue) * this.ProgressbarRect.width,
-                                     this.ProgressbarRect.height), 
+                                     this.ProgressbarRect.height),
                             this.ProgressbarForeground, ScaleMode.StretchToFill);
-            GUI.Label(this.ProgressbarRect, this.Text);
+            //GUI.Label(new Rect(this.ProgressbarRect.xMax / 2 + 25, this.ProgressbarRect.y, this.ProgressbarRect.width, this.ProgressbarRect.height), this.Text);
         }
     }
     #endregion
@@ -30,12 +30,9 @@ public class Progressbar : MonoBehaviour
     public Texture2D ProgressbarBackground;
     public Texture2D ProgressbarForeground;
     public bool ShowProgressbar;
-    public string Text; 
+    public string Text;
     public Rect ProgressbarRect;
 
-    #endregion
-
-    #region - Function
     #endregion
     #endregion
 }

@@ -8,21 +8,22 @@ public class MessageInitialize : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        switch (Application.loadedLevel)
+        switch (Application.loadedLevelName)
         {
-            case 5:
-                this.GetMessageFromGameObject("OpenDoor").SetMessage("Aktionstaste druecken um die Tuer zu oeffnen");
-                this.GetMessageFromGameObject("OpenKeyDoor").SetMessage(@"Um Tueren mit einem farbigen Schloss zu oeffnen 
-wird ein Schluessel benoetigt",this.OpenKeyDoorTrigger, 400, 50);
+            case "Level1":
+                this.GetMessageFromGameObject("OpenDoor").SetMessage("Aktionstaste drücken um die Tuer zu öffnen");
+                this.GetMessageFromGameObject("OpenKeyDoor").SetMessage(@"Um Türen mit einem farbigen Schloss zu öffnen 
+wird ein Schlüssel benoetigt",this.OpenKeyDoorTrigger, 400, 50);
                 break;
-            case 6:
-                this.GetMessageFromGameObject("TowerButton").SetMessage("Aktionstaste druecken um die Tuerme abzuschalten", 
+            case "Level2":
+                this.GetMessageFromGameObject("TowerButton").SetMessage("Aktionstaste drücken um die Türme abzuschalten", 
                                                                          this.TowerButtonTrigger);
                 break;
-            case 8:
-                this.GetMessageFromGameObject("Weapon").SetMessage("Aktionstaste druecken um die Waffe aufzuheben",
+            case "Level4":
+                this.GetMessageFromGameObject("Weapon").SetMessage("Aktionstaste drücken um die Waffe aufzuheben",
                                                                        this.WeaponTrigger);
-                this.GetMessageFromGameObject("Attack").SetMessage("Aktionstaste druecken um die Tuerme abzuschalten",
+                this.GetMessageFromGameObject("Attack").SetMessage(@"Angriffstaste drücken um den Gegner anzugreifen. 
+                Gegner stirbt sofort bei einem unbemerkten Angriff.",
                                                                        this.AttackTrigger);
                 break;
             default:
@@ -55,7 +56,7 @@ wird ein Schluessel benoetigt",this.OpenKeyDoorTrigger, 400, 50);
 
     private bool AttackTrigger()
     {
-        return GameObject.Find("Enemy0") != null;
+        return (GameObject.FindObjectOfType<EnemySoldier>() != null); 
     }
     #endregion
 }

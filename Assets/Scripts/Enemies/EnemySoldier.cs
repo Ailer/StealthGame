@@ -36,7 +36,7 @@ public class EnemySoldier : EnemyBase
 
     private void InstantiateAttentionIndicator()
     {
-        this.AttentionIndicator.ProgressbarRect = new Rect(Screen.width - 345, Screen.height - 50, 250, 20);
+        this.AttentionIndicator.ProgressbarRect = new Rect(Screen.width - 235, Screen.height - 50, 200, 20);
         this.AttentionIndicator.ShowProgressbar = false;
         this.AttentionIndicator.MaxValue = EnemySoldier.followPlayerTimerStart;
         this.AttentionIndicator.CurrentValue = this._followPlayerTimer;
@@ -133,12 +133,12 @@ public class EnemySoldier : EnemyBase
     {
         this._followPlayerTimer = this._followPlayerTimer > 0 ? this._followPlayerTimer - 1.0f * Time.deltaTime : 0f;
         this.AttentionIndicator.CurrentValue = this._followPlayerTimer;
-        this.Weapon.Attack = false;
+        this.StopAttackWithWeapons();
 
         if (base.LocateTarget())
         {
             this._walkToWaypoints = false;
-            this.Weapon.Attack = true;
+            this.AttackWithWeapons();
             this._followPlayerTimer = EnemySoldier.followPlayerTimerStart;
             this.AttentionIndicator.ShowProgressbar = true;
         }

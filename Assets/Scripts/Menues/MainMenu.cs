@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
         this.showMenu = false;
         Time.timeScale = 1;
         Screen.showCursor = false;
-        GameLogic.ActivateCameraControl();
+        GameObject.FindObjectOfType<GameLogic>().ActivateCameraControl();
     }
 
     private void OnGUI()
@@ -37,24 +37,24 @@ public class MainMenu : MonoBehaviour
             }
             else if (showPreviousLevel && GUILayout.Button("Vorheriges Level laden"))
             {
-                GameLogic.LoadLevel(Application.loadedLevel - 1);
+                GameObject.FindObjectOfType<GameLogic>().LoadLevel(Application.loadedLevel - 1);
                 this.CloseMenu();
             }
             else if (GUILayout.Button("Level neustarten"))
             {
-                GameLogic.LoadLevel(Application.loadedLevel);
+                GameObject.FindObjectOfType<GameLogic>().LoadLevel(Application.loadedLevel);
                 this.CloseMenu();
             }
             else if (this.levelFinished
                 && Application.loadedLevel < Application.levelCount
                 && GUILayout.Button("Nächstes Level"))
             {
-                GameLogic.LoadLevel(Application.loadedLevel + 1);
+                GameObject.FindObjectOfType<GameLogic>().LoadLevel(Application.loadedLevel + 1);
                 this.CloseMenu();
             }
-            if (GUILayout.Button("Beenden"))
+            if (GUILayout.Button("Zurück zum Hauptmenü"))
             {
-                Application.Quit();
+                GameObject.FindObjectOfType<GameLogic>().LoadLevel("StartMenu");
             }
 
             GUILayout.EndArea();
@@ -70,6 +70,6 @@ public class MainMenu : MonoBehaviour
     {
         this.showMenu = true;
         this.levelFinished = levelFinished;
-        GameLogic.DeactivateCameraControl();
+        GameObject.FindObjectOfType<GameLogic>().DeactivateCameraControl();
     }
 }

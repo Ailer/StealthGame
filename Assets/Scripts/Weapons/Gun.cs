@@ -20,7 +20,6 @@ public class Gun : Weapon
         {
             if (this.Attack)
             {
-                Debug.Log("Schiessen");
                 Vector3 position = new Vector3(transform.position.x + transform.forward.x * 0.12f, transform.position.y + 0.12f, transform.position.z);
                 GameObject bulletGob = Instantiate(this.BulletPrefab,
                                                    position,

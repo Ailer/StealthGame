@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Clock" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQACBAAAAACAAgAAAAAAAAAAAAAAADAAAAARA=</HashCode>
+      <FileName>Assets\ImportedAssets\Clock\Scripts\Clock.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MouseLook" Collapsed="true">
+    <Position X="11.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAEACAAAAAAAAGAAAAAAIAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\ImportedAssets\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Button" Collapsed="true">
+    <Position X="5.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAIAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Buttons\Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ButtonEnemyTower" Collapsed="true">
+    <Position X="5.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Buttons\ButtonEnemyTower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Door" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAQAAACCAAAQAAAiAAAEAAAAAQAASIACAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Door\Door.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalDoor" Collapsed="true">
+    <Position X="5.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Door\FinalDoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyBase" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACQAAAAAAAAACAAAAAAIAAgAAACgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemies\EnemyBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemySoldier" Collapsed="true">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAEAqAAAAQABIAAChIEAAAAQgAARAAQBAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemies\EnemySoldier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyTower" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAiAAQACAAAKABAAAAAAAAAAAEAAgAAAAQAA=</HashCode>
+      <FileName>Assets\Scripts\Enemies\EnemyTower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameLogic" Collapsed="true">
+    <Position X="11.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIQAACAAACAJAAAAEAAAAIQEAAAAAAAAACCAAACAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameLogic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Inventory" Collapsed="true">
+    <Position X="13.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAIEAAAAABAABAAAAAAAAAAAEAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Inventory\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InventoryObject" Collapsed="true">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAIAAAAAAAAAAAQAAAgAEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Inventory\InventoryObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenu" Collapsed="true">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAABAAAAQAEAAAAAAAAAAAAAAAACAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Menues\MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartMenu" Collapsed="true">
+    <Position X="9.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menues\StartMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Message" Collapsed="true">
+    <Position X="11.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAEAAAABQAAAAACAIAAQAAAAAAQAgBAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Messages\Message.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MessageInitialize" Collapsed="true">
+    <Position X="13.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACIAAAAAAgAAAAAAAAAAAAAAAAAACAAQAAg=</HashCode>
+      <FileName>Assets\Scripts\Messages\MessageInitialize.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MessageSystem" Collapsed="true">
+    <Position X="8" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQgAACAAAAAAAAAAAAAAAAAAAAAAAACJAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Messages\MessageSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MinimapCamera" Collapsed="true">
+    <Position X="9.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MinimapCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="13.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAABAAAqIgBAAAgAAAgAIAiAAGAAAAQACAAAAACFA=</HashCode>
+      <FileName>Assets\Scripts\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Progressbar" Collapsed="true">
+    <Position X="8" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAICiCAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Progressbar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bullet" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACADAACAAAAAAEAAAAAAAAAAAAABIBIAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gun" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAACAAABA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Gun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Knife" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Knife.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Weapon" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAACAAAAAAAAAQAAIAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Assets\Scripts\Weapons\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

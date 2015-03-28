@@ -3,26 +3,26 @@ using System.Collections;
 
 public class MinimapCamera : MonoBehaviour
 {
-    #region - Private
-    #region - Vars
+	#region - Private
+	#region - Vars
 
-    private GameObject _player;
+	private GameObject _player;
 
-    #endregion
+	#endregion
 
-    #region - Functions
+	#region - Functions
 
-    // Use this for initialization
-    void Start()
-    {
-        this._player = GameObject.Find("Player") as GameObject;
-    }
+	// Use this for initialization
+	void Start()
+	{
+		this._player = GameObject.Find("Player") as GameObject;
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
+	// Update is called once per frame
+	void Update()
+	{
 		this.transform.position = new Vector3(this._player.transform.position.x, this.transform.position.y, this._player.transform.position.z);
-    }
-    #endregion
-    #endregion
+	}
+	#endregion
+	#endregion
 }

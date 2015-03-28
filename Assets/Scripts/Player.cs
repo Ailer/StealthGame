@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
-//TODO: Waffe in GUI anzeigen
 public class Player : MonoBehaviour
 {
     #region - Private
@@ -36,10 +35,10 @@ public class Player : MonoBehaviour
 
     private void InstantiateLiveIndicator()
     {
-        this.LiveIndicator.ProgressbarRect = new Rect(85, Screen.height - 50, 200, 20);
+        this.LiveIndicator.ProgressbarRect = new Rect(120, Screen.height - 50, 200, 20);
         this.LiveIndicator.MaxValue = this.MaxLive;
         this.LiveIndicator.CurrentValue = this.CurrentLive;
-        this.LiveIndicator.Text = string.Format("{0}/{1}", this.CurrentLive, this.MaxLive);
+        //this.LiveIndicator.Text = string.Format("{0}/{1}", this.CurrentLive, this.MaxLive);
     }
 
     private void FixedUpdate()
@@ -47,15 +46,6 @@ public class Player : MonoBehaviour
         Vector3 movement = Vector3.zero;
         movement += Input.GetAxis("Horizontal") * transform.right;
         movement += Input.GetAxis("Vertical") * transform.forward;
-
-        //if (movement != Vector3.zero)
-        //{
-        //    this.SetSpeed(this.WalkSpeed);
-        //}
-        //else
-        //{
-        //    this.SetSpeed(0);
-        //}
 
         rigidbody.MovePosition(rigidbody.position + (movement.normalized * this.WalkSpeed * Time.deltaTime));
     }
@@ -86,7 +76,6 @@ public class Player : MonoBehaviour
         {
             if (hit.transform.tag == "Door")
             {
-                //this._playerController.SetTrigger(Player.pushButtonAnimationName);
                 Door door = hit.transform.gameObject.GetComponent<Door>();
 
                 if (door.Key != null)
@@ -117,14 +106,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    //private void SetSpeed(float speed)
-    //{
-    //    if (speed >= 0)
-    //    {
-    //        this._playerController.SetFloat(Player.speedVariableName, speed);
-    //    }
-    //}
-
     private void OnTriggerEnter(Collider inCollider)
     {
         if (inCollider.gameObject.name == "Bullet(Clone)")
@@ -138,8 +119,7 @@ public class Player : MonoBehaviour
 
             if (this.CurrentLive <= 0)
             {
-                Debug.Log("Game Over");
-                GameLogic.LoadLevel(1);
+                GameObject.FindObjectOfType<GameLogic>().LoadLevel("OutroLost");
             }
         }
     }
@@ -148,11 +128,11 @@ public class Player : MonoBehaviour
     {
         GUI.Label(new Rect(10,
                            this.LiveIndicator.ProgressbarRect.y - 30,
-                           70,
+                           100,
                            25),
-                           "<size=15> Waffe: </size>");
+                           "<size=15>Waffe: </size>");
 
-        Rect weaponNameRect = new Rect(85,
+        Rect weaponNameRect = new Rect(120,
                    this.LiveIndicator.ProgressbarRect.y - 30,
                    100,
                    25);
@@ -160,19 +140,19 @@ public class Player : MonoBehaviour
         if (this._weapon == null)
         {
             GUI.Label(weaponNameRect,
-                      "<size=15> Keine Waffe </size>");
+                      "<size=15>Keine Waffe </size>");
         }
         else
         {
             GUI.Label(weaponNameRect,
-                      string.Format("<size=15> {0} </size>", this._weapon.GetComponent<Weapon>().Name));
+                      string.Format("<size=15>{0} </size>", this._weapon.GetComponent<Weapon>().Name));
         }
 
         GUI.Label(new Rect(10,
-                           this.LiveIndicator.ProgressbarRect.y,
-                           70,
-                           25),
-                           "<size=15>Leben: </size>");
+                   this.LiveIndicator.ProgressbarRect.y,
+                   100,
+                   25),
+                   string.Format("<size=15>Leben ({0}/{1}): </size>", this.CurrentLive, this.MaxLive));
 
         float left = this.LiveIndicator.ProgressbarRect.x + this.LiveIndicator.ProgressbarRect.width + 20;
 

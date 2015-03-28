@@ -33,3 +33,15 @@ H:\Hochschule\Unity\Versteckspiel\Stealth\Temp\bin\Debug\ICSharpCode.NRefactory.
 H:\Hochschule\Unity\Versteckspiel\Stealth\obj\Debug\Assembly-CSharp.dll
 H:\Hochschule\Unity\Versteckspiel\Stealth\obj\Debug\Assembly-CSharp.pdb
 H:\Hochschule\Unity\Versteckspiel\Stealth\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\Temp\bin\Debug\Assembly-CSharp.dll
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\Temp\bin\Debug\UnityEditor.dll
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\Temp\bin\Debug\UnityEngine.dll
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\Temp\bin\Debug\UnityEngine.UI.dll
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\Temp\bin\Debug\Mono.Cecil.dll
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\Temp\bin\Debug\nunit.framework.dll
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\Temp\bin\Debug\Unity.DataContract.dll
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\obj\Debug\Assembly-CSharp-vs.csprojResolveAssemblyReference.cache
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\obj\Debug\Assembly-CSharp.dll
+E:\Daten\Hochschule\Unity Projekte\Abschlussprojekt\StealthGame\obj\Debug\Assembly-CSharp.pdb

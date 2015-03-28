@@ -1,20 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-//TODO: Ziel Cursor im Menü verbergen
 public class GameLogic : MonoBehaviour
 {
     private MainMenu _mainMenu;
     private bool _levelFinished;
     public const string Name = "GameLogic";
     public Texture2D CursorTexture;
+    public bool ShowCrossAir = true;
+    public bool IsMenuActivated = true;
 
-    // Use this for initialization
     private void Start()
     {
-        Screen.showCursor = false;
         this._mainMenu = this.gameObject.AddComponent<MainMenu>();
+
+        if (Application.loadedLevelName.Contains("Level")
+            && Application.loadedLevelName != "SelectLevel")
+        {
+            Screen.showCursor = false;
+        }
+        else
+        {
+            Screen.showCursor = true;
+        }
     }
 
     private void Update()
@@ -28,7 +36,8 @@ public class GameLogic : MonoBehaviour
 
     private void OnGUI()
     {
-        if (this._mainMenu.IsMenuClosed())
+        if (this.ShowCrossAir
+            && this._mainMenu.IsMenuClosed())
         {
             GUI.DrawTexture(new Rect(Screen.width / 2 - this.CursorTexture.width / 2,
                              Screen.height / 2 - this.CursorTexture.height / 2,
@@ -40,25 +49,42 @@ public class GameLogic : MonoBehaviour
 
     public void ShowMainMenu()
     {
-        this._mainMenu.ShowMenu();
+        if (this.IsMenuActivated)
+        {
+            this._mainMenu.ShowMenu();
+        }
     }
 
     public void FinishLevel()
     {
         this._levelFinished = true;
-        this._mainMenu.ShowMenu(true);
+
+        if (Application.loadedLevel + 1 == Application.levelCount)
+        {
+            this.LoadLevel("Credits");
+        }
+        else
+        {
+            this._mainMenu.ShowMenu(true);
+        }
     }
 
-    public static void LoadLevel(int levelId)
+    public void LoadLevel(int levelId)
     {
         Application.LoadLevel(levelId);
         Time.timeScale = 1;
         Screen.showCursor = false;
     }
 
-    public static void DeactivateCameraControl()
+    public void LoadLevel(string name)
     {
-        MouseLook [] mouseLooks = GameObject.FindObjectsOfType<MouseLook>();
+        Application.LoadLevel(name);
+        Time.timeScale = 1;
+    }
+
+    public void DeactivateCameraControl()
+    {
+        MouseLook[] mouseLooks = GameObject.FindObjectsOfType<MouseLook>();
 
         foreach (MouseLook mouselook in mouseLooks)
         {
@@ -66,7 +92,7 @@ public class GameLogic : MonoBehaviour
         }
     }
 
-    public static void ActivateCameraControl()
+    public void ActivateCameraControl()
     {
         MouseLook[] mouseLooks = GameObject.FindObjectsOfType<MouseLook>();
 
@@ -74,5 +100,10 @@ public class GameLogic : MonoBehaviour
         {
             mouselook.enabled = true;
         }
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
