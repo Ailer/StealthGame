@@ -5557,6 +5557,7 @@ GameObject:
   - 92: {fileID: 476737103}
   - 124: {fileID: 476737102}
   - 81: {fileID: 476737101}
+  - 114: {fileID: 476737100}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -5575,6 +5576,17 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &476737100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 476737098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f8dbf2c5f3ee3488e1faff7443365a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!81 &476737101
 AudioListener:
   m_ObjectHideFlags: 0
@@ -19963,7 +19975,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400048, guid: 3a6bf8e180e8f924b95640d0a31904f2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.03999996
+      value: .651814699
       objectReference: {fileID: 0}
     - target: {fileID: 400048, guid: 3a6bf8e180e8f924b95640d0a31904f2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -19999,6 +20011,14 @@ Prefab:
       objectReference: {fileID: 1021321329}
     - target: {fileID: 100118, guid: 3a6bf8e180e8f924b95640d0a31904f2, type: 2}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19500000, guid: 3a6bf8e180e8f924b95640d0a31904f2, type: 2}
+      propertyPath: m_BaseOffset
+      value: .670000017
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 3a6bf8e180e8f924b95640d0a31904f2, type: 2}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -22309,7 +22329,7 @@ Transform:
   m_PrefabInternal: {fileID: 1582383813}
   m_GameObject: {fileID: 1764563038}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: 28.4759998, y: 1.03999996, z: 31.1949997}
+  m_LocalPosition: {x: 28.4759998, y: .651814699, z: 31.1949997}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 102112711}
@@ -22334,7 +22354,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: .850000024
+  m_BaseOffset: .670000017
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!65 &1764563041
@@ -22346,7 +22366,7 @@ BoxCollider:
   m_GameObject: {fileID: 1764563038}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: .800000012, y: 2.02999997, z: 1.20000005}
   m_Center: {x: 0, y: .189999998, z: 0}

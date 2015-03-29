@@ -56,9 +56,15 @@
      <Compile Include="Assets\Scripts\Enemies\EnemySoldier.cs" />
      <Compile Include="Assets\Scripts\Enemies\EnemyTower.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
+     <Compile Include="Assets\Scripts\IntroOutro\GameOver.cs" />
+     <Compile Include="Assets\Scripts\IntroOutro\Intro.cs" />
+     <Compile Include="Assets\Scripts\IntroOutro\Outro.cs" />
      <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
      <Compile Include="Assets\Scripts\Inventory\InventoryObject.cs" />
      <Compile Include="Assets\Scripts\Menues\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\Menues\SelectLevel.cs" />
+     <Compile Include="Assets\Scripts\Menues\ShowControl.cs" />
+     <Compile Include="Assets\Scripts\Menues\ShowTarget.cs" />
      <Compile Include="Assets\Scripts\Menues\StartMenu.cs" />
      <Compile Include="Assets\Scripts\Messages\Message.cs" />
      <Compile Include="Assets\Scripts\Messages\MessageInitialize.cs" />

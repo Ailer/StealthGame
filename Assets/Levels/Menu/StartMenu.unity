@@ -103,7 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CursorTexture: {fileID: 0}
   ShowCrossAir: 1
-  IsMenuActivated: 1
+  IsMenuActivated: 0
 --- !u!4 &309310361
 Transform:
   m_ObjectHideFlags: 0
