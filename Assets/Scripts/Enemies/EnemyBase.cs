@@ -35,7 +35,7 @@ public abstract class EnemyBase : MonoBehaviour
 
         for (int i = this.VisualAngle / (-2); i < this.VisualAngle / 2; i += this.VisualAngleIncrement)
         {
-            ray.direction = Quaternion.AngleAxis(i, transform.up) * transform.forward;
+            ray.direction = Quaternion.AngleAxis(i + this.AngleOffset, transform.up) * transform.forward;
             Debug.DrawRay(ray.origin, ray.direction * this.VisualRange, Color.yellow);
             if (Physics.Raycast(ray, out hit, this.VisualRange))
             {
@@ -106,6 +106,7 @@ public abstract class EnemyBase : MonoBehaviour
     public float VisualRange;
     public int VisualAngle;
     public int VisualAngleIncrement;
+    public float AngleOffset;
 
     #endregion
 }

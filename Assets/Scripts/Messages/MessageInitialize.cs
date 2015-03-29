@@ -2,38 +2,40 @@
 using System.Collections;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 public class MessageInitialize : MonoBehaviour
 {
     // Use this for initialization
     void Start()
     {
+        Debug.Log(Application.loadedLevelName);
         switch (Application.loadedLevelName)
         {
             case "Level1":
-                this.GetMessageFromGameObject("OpenDoor").SetMessage("Aktionstaste drücken um die Tuer zu öffnen");
-                this.GetMessageFromGameObject("OpenKeyDoor").SetMessage(@"Um Türen mit einem farbigen Schloss zu öffnen 
-wird ein Schlüssel benoetigt",this.OpenKeyDoorTrigger, 400, 50);
+                this.GetMessageFromGameObjects("OpenDoor").ForEach(f => f.SetMessage("Aktionstaste drücken um die Tuer zu öffnen"));
+                this.GetMessageFromGameObjects("OpenKeyDoor").ForEach(f => f.SetMessage(@"Um Türen mit einem farbigen Schloss zu öffnen 
+wird ein Schlüssel benoetigt", this.OpenKeyDoorTrigger, 400, 50));
                 break;
             case "Level2":
-                this.GetMessageFromGameObject("TowerButton").SetMessage("Aktionstaste drücken um die Türme abzuschalten", 
-                                                                         this.TowerButtonTrigger);
+                this.GetMessageFromGameObjects("TowerButton").ForEach(f => f.SetMessage("Aktionstaste drücken um die Türme abzuschalten",
+                                                                         this.TowerButtonTrigger));
                 break;
             case "Level4":
-                this.GetMessageFromGameObject("Weapon").SetMessage("Aktionstaste drücken um die Waffe aufzuheben",
-                                                                       this.WeaponTrigger);
-                this.GetMessageFromGameObject("Attack").SetMessage(@"Angriffstaste drücken um den Gegner anzugreifen. 
-                Gegner stirbt sofort bei einem unbemerkten Angriff.",
-                                                                       this.AttackTrigger);
+                this.GetMessageFromGameObjects("Weapon").ForEach(f => f.SetMessage("Aktionstaste drücken um die Waffe aufzuheben",
+                                                                       this.WeaponTrigger));
+                this.GetMessageFromGameObjects("Attack").ForEach(f => f.SetMessage(@"Angriffstaste drücken um den Gegner anzugreifen.
+Gegner stirbt sofort bei einem unbemerkten Angriff.",
+                                                                       this.AttackTrigger, 400, 50));
                 break;
             default:
                 break;
         }
     }
 
-    private Message GetMessageFromGameObject(string key)
+    private List<Message> GetMessageFromGameObjects(string key)
     {
-        return GameObject.FindObjectsOfType<Message>().FirstOrDefault(f => f.Key == key);
+        return GameObject.FindObjectsOfType<Message>().Where(f => f.Key == key).ToList();
     }
 
     #region - Trigger
@@ -56,7 +58,7 @@ wird ein Schlüssel benoetigt",this.OpenKeyDoorTrigger, 400, 50);
 
     private bool AttackTrigger()
     {
-        return (GameObject.FindObjectOfType<EnemySoldier>() != null); 
+        return (GameObject.FindObjectOfType<EnemySoldier>() != null);
     }
     #endregion
 }

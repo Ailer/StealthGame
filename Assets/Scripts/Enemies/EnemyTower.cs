@@ -34,13 +34,14 @@ public class EnemyTower : EnemyBase
             {
                 this._foundPlayer = true;
                 this.AttackWithWeapons();
-                this.StartCoroutine("LookAtPlayer", this.RotationSpeed);
+                //this.StartCoroutine("LookAtPlayer", this.RotationSpeed);
+                this.LookAtPlayer(this.RotationSpeed);
             }
             else
             {
                 this._foundPlayer = false;
                 this.StopAttackWithWeapons();
-                this.StopCoroutine("LookAtPlayer");
+                //this.StopCoroutine("LookAtPlayer");
                 float angle = Quaternion.Angle(this._startRotation, this.transform.rotation);
                 this._distanceToTarget = Math.Abs(this.MaxRotation / 2) - angle;
 
@@ -54,8 +55,8 @@ public class EnemyTower : EnemyBase
         }
         else
         {
-            this.StopCoroutine("LookAtPlayer");
-            this.AttackWithWeapons();
+            //this.StopCoroutine("LookAtPlayer");
+            this.StopAttackWithWeapons();
         }
     }
     #endregion
@@ -65,7 +66,7 @@ public class EnemyTower : EnemyBase
 
     protected virtual IEnumerator LookAtPlayer(float rotationSpeed)
     {
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(transform.position, transform.forward + transform.right * 0.6f);
         RaycastHit hit;
         bool lookAt = false;
         Quaternion destRotation;
@@ -92,8 +93,13 @@ public class EnemyTower : EnemyBase
 
                 if (Quaternion.Angle(this._startRotation, rotation) <= this.MaxRotation / 2)
                 {
-                    transform.rotation = new Quaternion(0, rotation.y, 0, rotation.w);
+                    this.transform.rotation = new Quaternion(0, rotation.y, 0, rotation.w);
+                    Debug.Log("Nein");
                 }
+            }
+            else
+            {
+                Debug.Log("Ja");
             }
 
             yield return null;

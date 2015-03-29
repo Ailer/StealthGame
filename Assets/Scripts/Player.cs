@@ -110,7 +110,6 @@ public class Player : MonoBehaviour
     {
         if (inCollider.gameObject.name == "Bullet(Clone)")
         {
-            Debug.Log("ja");
             Bullet bullet = inCollider.GetComponent<Bullet>();
             this.CurrentLive = this.CurrentLive - bullet.Damage < 0 ? 0 : this.CurrentLive - bullet.Damage;
             this.LiveIndicator.CurrentValue = this.CurrentLive;
