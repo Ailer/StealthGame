@@ -16,7 +16,6 @@ public class Progressbar : MonoBehaviour
                                      (this.CurrentValue / this.MaxValue) * this.ProgressbarRect.width,
                                      this.ProgressbarRect.height),
                             this.ProgressbarForeground, ScaleMode.StretchToFill);
-            //GUI.Label(new Rect(this.ProgressbarRect.xMax / 2 + 25, this.ProgressbarRect.y, this.ProgressbarRect.width, this.ProgressbarRect.height), this.Text);
         }
     }
     #endregion

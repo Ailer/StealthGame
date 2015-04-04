@@ -1,45 +1,41 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StartMenu : MonoBehaviour
+public class StartMenu : MenuBase
 {
-    public Texture2D Background;
-
-    private void OnGUI()
+    protected override void OnGUI()
     {
+        base.OnGUI();
+        base.SetMenuBase(25, Screen.width / 2 - 70, 75, "Can You Escape?");
 
-        GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Background);
-        GUILayout.BeginArea(new Rect(Screen.width/2- 100, Screen.height / 2 - 200, 200, 700));
-        GUIStyle headline = new GUIStyle(); 
-        GUILayout.Label("<size=20><color=black> Can you Escape?</color></size>", headline);
-        GUILayout.Space(25);
-        GUIStyle buttonSkin = GUI.skin.GetStyle("Button");
-        buttonSkin.margin = new RectOffset(0, 0, 0, 15);
-
-        if (GUILayout.Button("Spiel starten"))
+        if (GUI.Button(new Rect(this.GetLeftPosition(), this.GetTopPositionForElement(), MenuBase.ButtonWidth, MenuBase.ButtonHeight),
+            "Spiel starten"))
         {
             GameObject.FindObjectOfType<GameLogic>().LoadLevel("Intro");
         }
 
-        if (GUILayout.Button("Level auswahl"))
+        if (GUI.Button(new Rect(this.GetLeftPosition(), this.GetTopPositionForElement(), MenuBase.ButtonWidth, MenuBase.ButtonHeight),
+            "Level auswahl"))
         {
             GameObject.FindObjectOfType<GameLogic>().LoadLevel("SelectLevel");
         }
 
-        if (GUILayout.Button("Steuerung anzeigen"))
+        if (GUI.Button(new Rect(this.GetLeftPosition(), this.GetTopPositionForElement(), MenuBase.ButtonWidth, MenuBase.ButtonHeight),
+            "Steuerung anzeigen"))
         {
             GameObject.FindObjectOfType<GameLogic>().LoadLevel("ShowControl");
         }
 
-        if (GUILayout.Button("Spielziel anzeigen!"))
+        if (GUI.Button(new Rect(this.GetLeftPosition(), this.GetTopPositionForElement(), MenuBase.ButtonWidth, MenuBase.ButtonHeight),
+            "Spielziel anzeigen!"))
         {
             GameObject.FindObjectOfType<GameLogic>().LoadLevel("ShowTarget");
         }
 
-        if (GUILayout.Button("Spiel beenden"))
+        if (GUI.Button(new Rect(this.GetLeftPosition(), this.GetTopPositionForElement(), MenuBase.ButtonWidth, MenuBase.ButtonHeight),
+            "Spiel beenden"))
         {
             Application.Quit();
         }
-        GUILayout.EndArea();
     }
 }

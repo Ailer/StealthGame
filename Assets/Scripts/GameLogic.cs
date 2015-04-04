@@ -3,9 +3,9 @@ using System.Collections;
 
 public class GameLogic : MonoBehaviour
 {
+    public const string Name = "GameLogic";
     private MainMenu _mainMenu;
     private bool _levelFinished;
-    public const string Name = "GameLogic";
     public Texture2D CursorTexture;
     public bool ShowCrossAir = true;
     public bool IsMenuActivated = true;
